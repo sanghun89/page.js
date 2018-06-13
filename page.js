@@ -1106,6 +1106,10 @@
       return stringToRegexp(path, keys, options)
     }
 
+    page.api = {};
+
+    page.api.onclick = onclick;
+
   },{"isarray":4}],4:[function(require,module,exports){
     module.exports = Array.isArray || function (arr) {
       return Object.prototype.toString.call(arr) == '[object Array]';
