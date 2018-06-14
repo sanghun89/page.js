@@ -185,6 +185,9 @@
         window.removeEventListener('popstate', onpopstate, false);
       };
 
+      page.api = {};
+      page.api.onclick = onclick;
+
       /**
        * Show `path` with optional `state` object.
        *
@@ -1105,10 +1108,6 @@
 
       return stringToRegexp(path, keys, options)
     }
-
-    page.api = {};
-
-    page.api.onclick = onclick;
 
   },{"isarray":4}],4:[function(require,module,exports){
     module.exports = Array.isArray || function (arr) {
